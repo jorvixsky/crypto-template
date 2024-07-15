@@ -6,16 +6,16 @@
 import "hardhat/types/artifacts";
 import type { GetContractReturnType } from "@nomicfoundation/hardhat-viem/types";
 
-import { Lock$Type } from "./Lock";
+import { Counter$Type } from "./Counter";
 
 declare module "hardhat/types/artifacts" {
   interface ArtifactsMap {
-    ["Lock"]: Lock$Type;
-    ["contracts/Lock.sol:Lock"]: Lock$Type;
+    ["Counter"]: Counter$Type;
+    ["contracts/Counter.sol:Counter"]: Counter$Type;
   }
 
   interface ContractTypesMap {
-    ["Lock"]: GetContractReturnType<Lock$Type["abi"]>;
-    ["contracts/Lock.sol:Lock"]: GetContractReturnType<Lock$Type["abi"]>;
+    ["Counter"]: GetContractReturnType<Counter$Type["abi"]>;
+    ["contracts/Counter.sol:Counter"]: GetContractReturnType<Counter$Type["abi"]>;
   }
 }
