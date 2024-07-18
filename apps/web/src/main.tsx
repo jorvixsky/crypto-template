@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
-          <RouterProvider router={router} />
+          <RouterProvider router={router}/>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
