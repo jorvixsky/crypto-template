@@ -1,13 +1,16 @@
 # crypto-template
 
-This is a turborepo template intended to be used to start new web3 projects, configured as follows:
+This is a turborepo template intended to be used to start new web3 projects, containing the following:
 
-### Apps and Packages
+## Apps and Packages
 
-- `web`: a vanilla [vite](https://vitejs.dev) ts app 
-- `@repo/ui`: a stub component & utility library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: shared `eslint` configurations
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `apps/web`: a [Vite](https://vitejs.dev) project including:
+    - [React Router](https://reactrouter.com/en/main) configured with HashRouter for enhanced compatibility with IPFS-deployed applications.
+    - [Wagmi](https://wagmi.sh/), [Viem](https://viem.sh/) and [TanStack Query](https://tanstack.com/query/latest) to handle blockchain actions.
+    - [RainbowKit](https://www.rainbowkit.com/) for wallet connection
+- `packages/hardhat`: a [hardhat](https://hardhat.org/) with [Viem](https://viem.sh/) project including:
+    -  [hardhat-chai-matchers-viem](https://www.npmjs.com/package/hardhat-chai-matchers-viem), a package to enable Ethereum-specific capabilities to [Chai](https://www.chaijs.com/) for testing when using Viem.
+    -  A simple example `Counter` contract, including source code, test and ignition deployment scripts. Intended to be used with the sample Vite application.
 
 ### Utilities
 
